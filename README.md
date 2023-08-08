@@ -1,26 +1,26 @@
 # JSP_Register
 
 ```
-	아이디 : <%= request.getParameter("id") %>
-	<br>
-	비밀번호 : <%= request.getParameter("password") %>
-	<br>
-	이름 : <%= request.getParameter("name") %>
-	<br>
-	성별 : <%= request.getParameter("gender") %>
-	<br>
-	취미 : 
-	<%
-		String[] hobby = request.getParameterValues("hobby");
-		if(hobby != null) {			
-			for(String i : hobby) {
-				out.print(i + " ");
-			}
-		} else {
-			out.print("선택된 데이터 정보 없음");
+아이디 : <%= request.getParameter("id") %>
+<br>
+비밀번호 : <%= request.getParameter("password") %>
+<br>
+이름 : <%= request.getParameter("name") %>
+<br>
+성별 : <%= request.getParameter("gender") %>
+<br>
+취미 : 
+<%
+	String[] hobby = request.getParameterValues("hobby");
+	if(hobby != null) {			
+		for(String i : hobby) {
+			out.print(i + " ");
 		}
-	%>
-	<br>
+	} else {
+		out.print("선택된 데이터 정보 없음");
+	}
+%>
+<br>
 ```
 
 ```
@@ -29,6 +29,8 @@
   <td><input type="text" name="id"></td>
 </tr>
 ```
+![image](https://github.com/cmc0904/JSP_Register/assets/63144310/48b0819b-b5c2-4105-8f3b-02a8da7b836a)
+
 <div style = "font-size: 45px;">
 <h4>request : 사용자가 웹 페이지에 접속하거나 폼을 제출할 때 전달되는 데이터나 요청 관련 정보를 "request" 객체를 통해 접근하고 처리할 수 있습니다. 이 객체를 사용하여 클라이언트로부터 받은 데이터를 서버 측에서 활용할 수 있습니다.</h4>
 <br>
